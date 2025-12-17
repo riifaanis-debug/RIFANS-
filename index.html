@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <title>ريفانس المالية | المنصة المتخصصة للحلول المالية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: '#22042C',
+              'brand-soft': '#3B0E49',
+              gold: '#C7A969',
+              'gold-light': '#f5e5b0',
+              muted: '#7A7288',
+              'bg-page': '#F5F4FA',
+              'dark-bg': '#06010a',
+              'dark-card': '#0f0216',
+            },
+            fontFamily: {
+              sans: ['Tajawal', 'sans-serif'],
+            },
+            backgroundImage: {
+              'card-gradient': 'linear-gradient(180deg, #FFFFFF 0%, #F9F6FF 100%)',
+              'gold-gradient': 'linear-gradient(135deg, #C7A969, #f5e5b0)',
+              'story-gradient': 'linear-gradient(180deg, #FFFDF7 0%, #FFF4E6 100%)',
+              'footer-gradient': 'linear-gradient(180deg, rgba(255,253,245,1) 0%, rgba(252,248,235,1) 35%, rgba(247,239,212,1) 70%, rgba(243,229,188,1) 100%)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+      }
+      /* Custom Scrollbar for horizontal strips */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-default::-webkit-scrollbar {
+          height: 4px;
+      }
+      .scrollbar-default::-webkit-scrollbar-thumb {
+          background: rgba(34, 4, 44, 0.25);
+          border-radius: 99px;
+      }
+      /* Animation for pulse dot */
+      @keyframes rf-pulse {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(199,169,105,0.9); }
+        70% { transform: scale(1.4); box-shadow: 0 0 0 8px rgba(199,169,105,0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(199,169,105,0); }
+      }
+      .animate-rf-pulse {
+        animation: rf-pulse 1.4s infinite;
+      }
+      /* Marquee Animation */
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 35s linear infinite;
+        width: max-content;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
+      }
+      /* Fade In Animation */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "html2canvas": "https://jspm.dev/html2canvas"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#F9F8FC] dark:bg-[#06010a] antialiased text-brand selection:bg-gold selection:text-white transition-colors duration-300">
+    <div id="root"></div>
+  </body>
+</html>
